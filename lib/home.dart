@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage>
 
     Future.delayed(
       Duration(seconds: 1),
-          () => _animationController.forward(),
+      () => _animationController.forward(),
     );
   }
 
@@ -89,18 +89,18 @@ class _MyHomePageState extends State<MyHomePage>
       body: Stack(
         children: <Widget>[
           _bottomNavIndex == 0
-              ? feed()
+              ? Feed()
               : _bottomNavIndex == 1
-              ? chat()
-              : _bottomNavIndex == 2
-              ? location()
-              : _bottomNavIndex == 3
-              ? profile()
-              : Container(
-            color: Colors.purple,
-            child: Text('AN ERROR OCCURRED',
-                style: TextStyle(fontSize: 18)),
-          ),
+                  ? chat()
+                  : _bottomNavIndex == 2
+                      ? location()
+                      : _bottomNavIndex == 3
+                          ? profile()
+                          : Container(
+                              color: Colors.purple,
+                              child: Text('AN ERROR OCCURRED',
+                                  style: TextStyle(fontSize: 18)),
+                            ),
         ],
       ),
       floatingActionButton: ScaleTransition(

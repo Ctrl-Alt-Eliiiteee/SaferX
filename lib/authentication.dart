@@ -16,7 +16,6 @@ class Authentication extends StatefulWidget {
 }
 
 class _AuthenticationState extends State<Authentication> {
-
   String password = '';
   Duration get loginTime => Duration(milliseconds: timeDilation.ceil() * 2250);
   Future<String> _loginUser(LoginData data) {
@@ -106,8 +105,7 @@ class _AuthenticationState extends State<Authentication> {
                           email: email, password: password);
                   final prefs = await SharedPreferences.getInstance();
                   prefs.remove('seferX_email');
-                  prefs.setString(
-                      'saferX_email', email.toString());
+                  prefs.setString('saferX_email', email.toString());
                   Fluttertoast.showToast(
                       msg: "Logging In",
                       toastLength: Toast.LENGTH_SHORT,
@@ -119,7 +117,8 @@ class _AuthenticationState extends State<Authentication> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => nav_bar()));
                 } catch (e) {
-                  print(e);
+                  _showAlertDialog(
+                      context, 'Please enter valid username or password');
                 }
                 return _loginUser(loginData);
               },
@@ -138,10 +137,12 @@ class _AuthenticationState extends State<Authentication> {
                       backgroundColor: Colors.black54,
                       textColor: Colors.white,
                       fontSize: 13.0);
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Authentication()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Authentication()));
                 } catch (e) {
-                  print(e);
+                  _showAlertDialog(context, 'Some error occured');
                 }
                 return _loginUser(loginData);
               },
@@ -155,4 +156,25 @@ class _AuthenticationState extends State<Authentication> {
       ),
     );
   }
+}
+
+Widget _showAlertDialog(BuildContext context, String message) {
+  AlertDialog alert = AlertDialog(
+    title: Text("Error"),
+    content: Text(message),
+    actions: [
+      FlatButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Text("Ok"),
+      ),
+    ],
+    elevation: 10,
+  );
+  showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      });
 }
