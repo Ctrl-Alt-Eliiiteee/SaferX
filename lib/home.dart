@@ -12,6 +12,7 @@ import 'Pages/feed.dart';
 import 'Pages/location.dart';
 import 'Pages/profile.dart';
 
+int a=0;
 class nav_bar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -49,6 +50,11 @@ class _MyHomePageState extends State<MyHomePage>
     FlutterIcons.face_profile_mco,
   ];
 
+  final defaultTheme = SystemUiOverlayStyle.light.copyWith(
+    systemNavigationBarColor: Colors.black,
+    systemNavigationBarIconBrightness: Brightness.light,
+  );
+
   @override
   void initState() {
     super.initState();
@@ -83,62 +89,68 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
-      resizeToAvoidBottomInset: false,
-      body: Stack(
-        children: <Widget>[
-          _bottomNavIndex == 0
-              ? Feed()
-              : _bottomNavIndex == 1
-                  ? ChatRoom()
-                  : _bottomNavIndex == 2
-                      ? location()
-                      : _bottomNavIndex == 3
-                          ? profile()
-                          : Container(
-                              color: Colors.purple,
-                              child: Text('AN ERROR OCCURRED',
-                                  style: TextStyle(fontSize: 18)),
-                            ),
-        ],
-      ),
-      floatingActionButton: ScaleTransition(
-        scale: animation,
-        child: FloatingActionButton(
-          elevation: 8,
-          backgroundColor: Colors.black54,
-          child: IconButton(
-              icon: Icon(FlutterIcons.google_assistant_mco),
-              color: Colors.white,
+    return Stack(
+      children: [
+        assistant(),
+        if(a==0)
+        Scaffold(
+          extendBody: true,
+          resizeToAvoidBottomInset: false,
+          body: Stack(
+            children: <Widget>[
+              _bottomNavIndex == 0
+                  ? Feed()
+                  : _bottomNavIndex == 1
+                      ? ChatRoom()
+                      : _bottomNavIndex == 2
+                          ? location()
+                          : _bottomNavIndex == 3
+                              ? profile()
+                              : Container(
+                                  color: Colors.purple,
+                                  child: Text('AN ERROR OCCURRED',
+                                      style: TextStyle(fontSize: 18)),
+                                ),
+            ],
+          ),
+          floatingActionButton: ScaleTransition(
+            scale: animation,
+            child: FloatingActionButton(
+              elevation: 8,
+              backgroundColor: Colors.black54,
+              child: IconButton(
+                  icon: Icon(FlutterIcons.google_assistant_mco),
+                  color: Colors.white,
+                  onPressed: () {
+                    setState(() {
+                      a = 1;
+                      SystemChrome.setSystemUIOverlayStyle(defaultTheme);
+                    });
+                  }),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => assistant()),
-                );
-              }),
-          onPressed: () {
-            _animationController.reset();
-            _animationController.forward();
-          },
+                _animationController.reset();
+                _animationController.forward();
+              },
+            ),
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          bottomNavigationBar: AnimatedBottomNavigationBar(
+            icons: iconList,
+            backgroundColor: Colors.purple,
+            activeIndex: _bottomNavIndex,
+            activeColor: Colors.black,
+            splashColor: Colors.black,
+            inactiveColor: Colors.white,
+            notchAndCornersAnimation: animation,
+            splashSpeedInMilliseconds: 300,
+            notchSmoothness: NotchSmoothness.defaultEdge,
+            gapLocation: GapLocation.center,
+            leftCornerRadius: 32,
+            rightCornerRadius: 32,
+            onTap: (index) => setState(() => _bottomNavIndex = index),
+          ),
         ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: AnimatedBottomNavigationBar(
-        icons: iconList,
-        backgroundColor: Colors.purple,
-        activeIndex: _bottomNavIndex,
-        activeColor: Colors.black,
-        splashColor: Colors.black,
-        inactiveColor: Colors.white,
-        notchAndCornersAnimation: animation,
-        splashSpeedInMilliseconds: 300,
-        notchSmoothness: NotchSmoothness.defaultEdge,
-        gapLocation: GapLocation.center,
-        leftCornerRadius: 32,
-        rightCornerRadius: 32,
-        onTap: (index) => setState(() => _bottomNavIndex = index),
-      ),
+      ],
     );
   }
 }
