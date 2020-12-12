@@ -151,24 +151,34 @@ class _profileState extends State<profile> {
           child: Center(
             child: Column(
               children: [
-                CircleAvatar(
-                  radius: 50.0,
-                  backgroundImage: CircleAvtarLink==null?AssetImage('images/profile.png'):NetworkImage(CircleAvtarLink),
-                ),
-                FlatButton(
-                  child: Icon(Icons.add_a_photo),
-                  onPressed: displayBottomSheet,
+                Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 50.0,
+                      backgroundImage: CircleAvtarLink==null?AssetImage('images/profile.png'):NetworkImage(CircleAvtarLink),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top:70.0,left: 40.0),
+                      child: FlatButton(
+                        child: Icon(Icons.add_a_photo),
+                        onPressed: displayBottomSheet,
+                      ),
+                    ),
+                  ],
                 ),
                 Text(email),
-                FlatButton(
-                  color: Colors.purple,
-                  child: Text('LogOut'),
-                  onPressed: () async {
-                    final prefs = await SharedPreferences.getInstance();
-                    prefs.remove('saferX_email');
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Authentication()));
-                  },
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: FlatButton(
+                    color: Colors.purple,
+                    child: Text('LogOut'),
+                    onPressed: () async {
+                      final prefs = await SharedPreferences.getInstance();
+                      prefs.remove('saferX_email');
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Authentication()));
+                    },
+                  ),
                 ),
               ],
             ),
