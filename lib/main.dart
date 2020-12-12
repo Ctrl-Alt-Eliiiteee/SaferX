@@ -9,6 +9,9 @@ Future main() async {
   await Firebase.initializeApp();
   SharedPreferences prefs = await SharedPreferences.getInstance();
   var status = prefs.getString('saferX_email');
+  if(status!=null){
+    email=status.toString();
+  }
   runApp(MyApp(status: status));
 }
 
