@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:path/path.dart' as path;
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
+import 'assistant.dart';
 
 class profile extends StatefulWidget {
   @override
@@ -145,31 +146,23 @@ class _profileState extends State<profile> {
   }
   @override
   Widget build(BuildContext context) {
+    resizeToAvoidBottomInset: true;
     return Scaffold(
         body: SafeArea(
-
           child: Center(
-            child: Column(
-              children: [
-                Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 50.0,
-                      backgroundImage: CircleAvtarLink==null?AssetImage('images/profile.png'):NetworkImage(CircleAvtarLink),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top:70.0,left: 40.0),
-                      child: FlatButton(
-                        child: Icon(Icons.add_a_photo),
-                        onPressed: displayBottomSheet,
-                      ),
-                    ),
-                  ],
-                ),
-                Text(email),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: FlatButton(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    radius: 50.0,
+                    backgroundImage: CircleAvtarLink==null?AssetImage('images/profile.png'):NetworkImage(CircleAvtarLink),
+                  ),
+                  FlatButton(
+                    child: Icon(Icons.add_a_photo),
+                    onPressed: displayBottomSheet,
+                  ),
+                  Text(email),
+                  FlatButton(
                     color: Colors.purple,
                     child: Text('LogOut'),
                     onPressed: () async {
@@ -179,12 +172,47 @@ class _profileState extends State<profile> {
                           MaterialPageRoute(builder: (context) => Authentication()));
                     },
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text('First Number'),
+                  TextFormField(
+                    initialValue: first,
+                    keyboardType: TextInputType.number,
+                    onChanged: (String value) async {
+                      final prefs = await SharedPreferences.getInstance();
+                      prefs.setString('first_number', value);
+                    }
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text('Second Number'),
+                  TextFormField(
+                    initialValue: second,
+                      keyboardType: TextInputType.number,
+                      onChanged: (String value) async {
+                        final prefs = await SharedPreferences.getInstance();
+                        prefs.setString('second_number', value);
+                      }
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text('Third Number'),
+                  TextFormField(
+                    initialValue: third,
+                      keyboardType: TextInputType.number,
+                      onChanged: (String value) async {
+                        final prefs = await SharedPreferences.getInstance();
+                        prefs.setString('third_number', value);
+                      }
+                  ),
+                ],
+              ),
             ),
           ),
         ),
-
-        );
+    );
   }
 }
