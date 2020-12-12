@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:saferx/Pages/One_on_One_Chat/ChatRoom.dart';
 import 'Pages/assistant.dart';
 import 'Pages/chat.dart';
 import 'Pages/feed.dart';
@@ -91,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage>
           _bottomNavIndex == 0
               ? Feed()
               : _bottomNavIndex == 1
-                  ? chat()
+                  ? ChatRoom()
                   : _bottomNavIndex == 2
                       ? location()
                       : _bottomNavIndex == 3

@@ -6,6 +6,7 @@ import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'Pages/One_on_One_Chat/database1.dart';
 import 'home.dart';
 
 String email = '';
@@ -130,6 +131,13 @@ class _AuthenticationState extends State<Authentication> {
                   final newUser = await FirebaseAuth.instance
                       .createUserWithEmailAndPassword(
                           email: email, password: password);
+                  Map<String, String> userDataMap = {
+                    "userName":
+                    loginData.name.substring(0, loginData.name.length - 10),
+                    "userEmail": loginData.name,
+                  };
+                  DatabaseMethods databaseMethods = new DatabaseMethods();
+                  databaseMethods.addUserInfo(userDataMap);
                   Fluttertoast.showToast(
                       msg: "Registered",
                       toastLength: Toast.LENGTH_SHORT,
