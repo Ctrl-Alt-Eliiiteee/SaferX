@@ -159,12 +159,13 @@ class _profileState extends State<profile> {
                   child: Icon(Icons.add_a_photo),
                   onPressed: displayBottomSheet,
                 ),
+                Text(email),
                 FlatButton(
                   color: Colors.purple,
                   child: Text('LogOut'),
                   onPressed: () async {
                     final prefs = await SharedPreferences.getInstance();
-                    prefs.remove('seferX_email');
+                    prefs.remove('saferX_email');
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Authentication()));
                   },

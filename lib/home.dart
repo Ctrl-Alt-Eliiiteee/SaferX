@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:saferx/Pages/One_on_One_Chat/ChatRoom.dart';
 import 'Pages/assistant.dart';
-import 'Pages/chat.dart';
 import 'Pages/feed.dart';
 import 'Pages/location.dart';
 import 'Pages/profile.dart';
