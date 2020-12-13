@@ -50,7 +50,7 @@ This is an all round application that will greatly have an influence in all the 
 </p>
 
 6. AI chatbot that speaks to you when u ask them basic questions 
- <img src = "assistant.jpg" height=300> 
+ <img src = "Assisstant.jpeg" height=300> 
 
 
 **Developers :-**
