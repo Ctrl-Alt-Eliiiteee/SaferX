@@ -35,7 +35,7 @@ This is an all round application that will greatly have an influence in all the 
 </p>
 
 2. Determining whether a place is safe or not by calculating the number of cases in that area.
- <img src = "safteycheck.jpeg" height=300> 
+ <img src = "location.jpeg" height=300> 
 3. Have one on one encrypted chat system for communication
  <img src = "chat.jpeg" height=300> 
 4. Live feed will involve work in database of uploading and seeing data./
