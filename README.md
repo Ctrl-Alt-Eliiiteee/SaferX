@@ -1,6 +1,6 @@
 # SaferX
 
-[![Watch the video](MedWatch.png)](https://youtu.be/DirB7RAHd0Y)
+[![Watch the video](pic.png)](https://youtu.be/FYkfWy6N3Ag)
 **(Click the image to go to the youtube video link of the App)**
 
 **FLUTTER MOBILE APP APK -** [[click here]](https://github.com/Ctrl-Alt-Eliiiteee/SaferX/raw/main/SaferX.apk)
