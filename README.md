@@ -51,6 +51,9 @@ This is an all round application that will greatly have an influence in all the 
 
 6. AI chatbot that speaks to you when u ask them basic questions 
  <img src = "Assisstant.jpeg" height=300> 
+ 
+ 7. A Profile Page showing your details and consist of Textfield to register the numbers for help me feature.
+ <img src = "ProfilePage.jpeg" height=300>
 
 
 **Developers :-**
