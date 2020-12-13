@@ -3,7 +3,7 @@
 [![Watch the video](MedWatch.png)](https://youtu.be/DirB7RAHd0Y)
 **(Click the image to go to the youtube video link of the App)**
 
-**FLUTTER MOBILE APP APK -** [[click here]](https://github.com/savss624/Elixir/raw/main/Elixir.apk)
+**FLUTTER MOBILE APP APK -** [[click here]](https://github.com/Ctrl-Alt-Eliiiteee/SaferX/blob/main/SaferX.apk)
 
 Everyone knows that Women feel unsafe in travelling alone at night , working late hours etc. This situation is there because of all the news we here involving women. This application will help change the outlook of the condition of India. Our teams basic goal is to provide a safer place for everyone to stay in and hope to achieve with this application.
 
