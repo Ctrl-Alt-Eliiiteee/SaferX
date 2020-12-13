@@ -31,35 +31,31 @@ This is an all round application that will greatly have an influence in all the 
 1. Easy Sign up and Login with your email and password - powered by **Google Realtime Firebase**.
 
 <p float="left">
-<img src = "login.jpg" height=300            > 
-<img src = "signup.jpg" height=300>
+<img src = "LoginPage.jpg" height=300>
 </p>
 
 2. Determining whether a place is safe or not by calculating the number of cases in that area.
- <img src = "location.jpg" height=300> 
+ <img src = "safteycheck.jpg" height=300> 
 3. Have one on one encrypted chat system for communication
- <img src = "english_chat.jpg" height=300> 
+ <img src = "chat.jpg" height=300> 
 4. Live feed will involve work in database of uploading and seeing data./
  <p float="left">
-<img src = "Donate.jpeg" height=300            > 
-<img src = "Donate-1.jpeg" height=300>
- <img src = "Receive.jpeg" height=300            > 
-<img src = "Receive-1.jpeg" height=300>
+<img src = "Feed.jpeg" height=300            > 
+
 </p>
 5. Help me voice integration where message will be sent to the concerned nearby authorities.
  <p float="left">
 <img src = "Video-2.jpg" height=300            > 
-<img src = "Video-1.jpg" height=300>
+
 </p>
-6. Common discussion forum available 
-<img src = "english_chat.jpg" height=300> 
-7. AI chatbot that speaks to you when u ask them basic questions 
+
+6. AI chatbot that speaks to you when u ask them basic questions 
  <img src = "assistant.jpg" height=300> 
 
 
 **Developers :-**
 
-<img src = "dev..jpg" height=300> 
+<img src = "aboutpage2.jpeg" height=300> 
 
 We have made this Application with the vision of helping the community in any small way possible and just hope that the women can walk freely even in mid night.
    
