@@ -43,13 +43,13 @@ This is an all round application that will greatly have an influence in all the 
 <img src = "Feed.jpeg" height=300            > 
 
 </p>
-5. Help me voice integration where message will be sent to the concerned nearby authorities.
+5. Help me voice integration where your current location will be sent to the concerned nearby authorities (works even in background mode or locked mode).
  <p float="left">
 <img src = "Helpme.jpeg" height=300            > 
 
 </p>
 
-6. AI chatbot that speaks to you when u ask them basic questions 
+6. AI chatbot that speaks to you when u ask them basic questions. 
  <img src = "Assisstant.jpeg" height=300> 
  
  7. A Profile Page showing your details and consist of Textfield to register the numbers for help me feature.
