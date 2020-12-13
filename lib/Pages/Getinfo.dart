@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-//import 'package:translator/translator.dart';
+import 'package:saferx/home.dart';
 
 String email;
 File _imageFile;
@@ -34,6 +34,18 @@ class _GetInfoState extends State<GetInfo> {
       body: SingleChildScrollView(
         child: Stack(
           children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 20, left: 20),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: IconButton(
+                  icon: Icon(Icons.arrow_back_sharp),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ),
+            ),
             Padding(
                 padding: EdgeInsets.only(top: 150),
                 child: Column(
@@ -263,7 +275,7 @@ class _ImageCaptureState extends State<ImageCapture> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#373A36'),
+      backgroundColor: Color(0xff373A36),
       appBar: AppBar(
         title: Center(child: Text('Selected Image')),
         backgroundColor: Colors.purple,

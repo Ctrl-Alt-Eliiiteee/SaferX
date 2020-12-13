@@ -2,6 +2,8 @@ import 'constants.dart';
 import 'database1.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:saferx/home.dart';
+import 'package:saferx/main.dart';
 
 
 class Chat extends StatefulWidget {
@@ -70,6 +72,12 @@ class _ChatState extends State<Chat> {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_sharp),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: Colors.purple,
         title: Text('ChatApp'),
       ),

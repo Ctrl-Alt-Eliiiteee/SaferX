@@ -1,3 +1,5 @@
+import 'package:saferx/Pages/One_on_One_Chat/ChatRoom.dart';
+import 'package:saferx/main.dart';
 import '../../authentication.dart';
 import 'constants.dart';
 import 'user.dart';
@@ -5,7 +7,8 @@ import 'database1.dart';
 import 'widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
+import 'package:saferx/home.dart';
+import 'package:saferx/main.dart';
 import 'Ochat.dart';
 
 class Search extends StatefulWidget {
@@ -136,6 +139,12 @@ class _SearchState extends State<Search> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_sharp),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text('Chatroom'),
         backgroundColor: Colors.purple,
       ),

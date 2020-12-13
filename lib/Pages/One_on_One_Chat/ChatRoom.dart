@@ -78,8 +78,8 @@ class _ChatRoomState extends State<ChatRoom> {
           GestureDetector(
             onTap: () {
               //AuthService().signOut();
-              Navigator.pushReplacement(
-                  context, MaterialPageRoute(builder: (context) => Search()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Search()));
             },
             child: Padding(
               padding: const EdgeInsets.all(8.0),
