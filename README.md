@@ -45,7 +45,7 @@ This is an all round application that will greatly have an influence in all the 
 </p>
 5. Help me voice integration where message will be sent to the concerned nearby authorities.
  <p float="left">
-<img src = "Video-2.jpg" height=300            > 
+<img src = "Helpme.jpeg" height=300            > 
 
 </p>
 
