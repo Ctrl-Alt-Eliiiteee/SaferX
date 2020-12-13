@@ -38,7 +38,7 @@ This is an all round application that will greatly have an influence in all the 
  <img src = "location.jpeg" height=300> 
 3. Have one on one encrypted chat system for communication
  <img src = "chat.jpeg" height=300> 
-4. Live feed will involve work in database of uploading and seeing data./
+4. Live feed will involve work in database of uploading and seeing data.
  <p float="left">
 <img src = "Feed.jpeg" height=300            > 
 
