@@ -34,11 +34,11 @@ This is an all round application that will greatly have an influence in all the 
 <img src = "LoginPage.jpeg" height=300>
 </p>
 
-2. Determining whether a place is safe or not by calculating the number of cases in that area.
+2. Determining whether a place is safe or not depending on the data taken from government site about that area.
  <img src = "location.jpeg" height=300> 
-3. Have one on one encrypted chat system for communication
+3. Have one on one encrypted chat system for communication with the concerned authorities.
  <img src = "chat.jpeg" height=300> 
-4. Live feed will involve work in database of uploading and seeing data.
+4. Live feed will involve work in database of uploading and seeing data about women empowerment.
  <p float="left">
 <img src = "Feed.jpeg" height=300            > 
 
@@ -49,7 +49,7 @@ This is an all round application that will greatly have an influence in all the 
 
 </p>
 
-6. AI chatbot that speaks to you when u ask them basic questions. 
+6. AI chatbot that speaks to you when u ask them basic questions ,also works in background mode. 
  <img src = "Assisstant.jpeg" height=300> 
  
  7. A Profile Page showing your details and consist of Textfield to register the numbers for help me feature.
