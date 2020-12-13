@@ -31,13 +31,13 @@ This is an all round application that will greatly have an influence in all the 
 1. Easy Sign up and Login with your email and password - powered by **Google Realtime Firebase**.
 
 <p float="left">
-<img src = "LoginPage.jpg" height=300>
+<img src = "LoginPage.jpeg" height=300>
 </p>
 
 2. Determining whether a place is safe or not by calculating the number of cases in that area.
- <img src = "safteycheck.jpg" height=300> 
+ <img src = "safteycheck.jpeg" height=300> 
 3. Have one on one encrypted chat system for communication
- <img src = "chat.jpg" height=300> 
+ <img src = "chat.jpeg" height=300> 
 4. Live feed will involve work in database of uploading and seeing data./
  <p float="left">
 <img src = "Feed.jpeg" height=300            > 
