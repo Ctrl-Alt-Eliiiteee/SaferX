@@ -136,36 +136,38 @@ class _assistantState extends State<assistant> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 300),
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(right: 40, left: 40),
-                  child: Container(
-                    child: SingleChildScrollView(
-                        child: Text('$result\n\n',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold))),
-                    height: 50,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 300),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(right: 40, left: 40),
+                    child: Container(
+                      child: SingleChildScrollView(
+                          child: Text('$result\n\n',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold))),
+                      height: 50,
+                    ),
                   ),
-                ),
-                Image.asset('images/voice wave.gif'),
-                IconButton(
-                  icon : Icon(Icons.home_outlined),
-                  color: Colors.white,
-                  iconSize: 40,
-                  onPressed: () {
-                    setState(() {
-                      a = 0;
-                      main();
-                    });
-                  },
-                )
-              ],
+                  Image.asset('images/voice wave.gif'),
+                  IconButton(
+                    icon : Icon(Icons.home_outlined),
+                    color: Colors.white,
+                    iconSize: 40,
+                    onPressed: () {
+                      setState(() {
+                        a = 0;
+                        main();
+                      });
+                    },
+                  )
+                ],
+              ),
             ),
           ),
         ),

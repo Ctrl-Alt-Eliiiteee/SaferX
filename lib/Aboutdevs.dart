@@ -89,71 +89,75 @@ class AboutDev extends StatelessWidget {
               padding: EdgeInsets.only(left: 40, right: 40),
               child: Divider(height: 40, color: Colors.grey[800]),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('images/sohamsakaria.jpg'),
-                      radius: 60,
-                    ),
-                    Text('Soham Sakaria',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w300,
-                        ))
-                  ],
-                ),
-                SizedBox(width: 40),
-                Column(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage:
-                          AssetImage('images/parthsrivastava.jpeg'),
-                      radius: 60,
-                    ),
-                    Text('Parth Srivastava',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w300,
-                        ))
-                  ],
-                ),
-              ],
+            SingleChildScrollView(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage('images/sohamsakaria.jpg'),
+                        radius: 60,
+                      ),
+                      Text('Soham Sakaria',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w300,
+                          ))
+                    ],
+                  ),
+                  SizedBox(width: 40),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage:
+                            AssetImage('images/parthsrivastava.jpeg'),
+                        radius: 60,
+                      ),
+                      Text('Parth Srivastava',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w300,
+                          ))
+                    ],
+                  ),
+                ],
+              ),
             ),
             SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('images/eeshandutta.jpg'),
-                      radius: 60,
-                    ),
-                    Text('Eeshan Dutta',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w300,
-                        ))
-                  ],
-                ),
-                SizedBox(width: 60),
-                Column(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('images/parthpandey.jpg'),
-                      radius: 60,
-                    ),
-                    Text('Parth Pandey',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w300,
-                        ))
-                  ],
-                ),
-              ],
+            SingleChildScrollView(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage('images/eeshandutta.jpg'),
+                        radius: 60,
+                      ),
+                      Text('Eeshan Dutta',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w300,
+                          ))
+                    ],
+                  ),
+                  SizedBox(width: 60),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage('images/parthpandey.jpg'),
+                        radius: 60,
+                      ),
+                      Text('Parth Pandey',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w300,
+                          ))
+                    ],
+                  ),
+                ],
+              ),
             ),
             SizedBox(height: 80),
           ],
